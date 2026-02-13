@@ -2,7 +2,7 @@
 
 ## Descripción
 En este proyecto se intentara codificar y armar un programa funcional y eficiente enfocado en la visualizacion
-y tal vez venta de albumes y mixtapes dentro de la indusria musical ya sea mainstream o underground
+y reproduccion de albumes y mixtapes dentro de la indusria musical ya sea mainstream o underground
 
 ## Motivación
 intentar recrear un antiguo programa realizadohace ya un par de años pero mejorado y optimizado aprovechando los conocimientos adquiridos a los largo del tiempo.

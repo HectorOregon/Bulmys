@@ -35,9 +35,9 @@ Se eliminaron dependencias transitivas. Por ejemplo, la información del artista
 | Campo | Tipo de dato | Clave | Descripción |
 |------|--------------|------|-------------|
 | id_usuario | INT | PK | Identificador único del usuario |
-| nombre | VARCHAR | — | Nombre del usuario |
-| email | VARCHAR | — | Correo electrónico del usuario |
-| contraseña | VARCHAR | — | Contraseña del usuario |
+| nombre | VARCHAR(100) | — | Nombre del usuario |
+| email | VARCHAR(150) | — | Correo electrónico del usuario |
+| contraseña | VARCHAR(255) | — | Contraseña del usuario |
 
 
 ## Tabla: Artista
@@ -45,27 +45,27 @@ Se eliminaron dependencias transitivas. Por ejemplo, la información del artista
 | Campo | Tipo de dato | Clave | Descripción |
 |------|--------------|------|-------------|
 | id_artista | INT | PK | Identificador único del artista |
-| nombre | VARCHAR | — | Nombre del artista o grupo |
+| nombre | VARCHAR(150) | — | Nombre del artista o grupo |
 
 
 ## Tabla: Album
 
 | Campo | Tipo de dato | Clave | Descripción |
 |------|--------------|------|-------------|
-| id_album | INT | PK | Identificador del álbum |
-| id_artista | INT | FK | Artista al que pertenece el álbum |
-| titulo | VARCHAR | — | Título del álbum |
+| id_album | INT | PK | Identificador único del álbum |
+| titulo | VARCHAR(150) | — | Título del álbum |
+| id_artista | INT | FK | Identificador del artista al que pertenece |
 
 
 ## Tabla: Cancion
 
 | Campo | Tipo de dato | Clave | Descripción |
 |------|--------------|------|-------------|
-| id_cancion | INT | PK | Identificador de la canción |
-| id_artista | INT | FK | Artista que interpreta la canción |
-| id_album | INT | FK | Álbum al que pertenece la canción |
-| titulo | VARCHAR | — | Título de la canción |
+| id_cancion | INT | PK | Identificador único de la canción |
+| titulo | VARCHAR(150) | — | Título de la canción |
 | duracion | TIME | — | Duración de la canción |
+| id_album | INT | FK | Álbum al que pertenece la canción |
+| id_artista | INT | FK | Artista que interpreta la canción |
 
 
 ## Tabla: Reproduccion
@@ -74,5 +74,5 @@ Se eliminaron dependencias transitivas. Por ejemplo, la información del artista
 |------|--------------|------|-------------|
 | id_reproduccion | INT | PK | Identificador de la reproducción |
 | id_usuario | INT | FK | Usuario que reproduce la canción |
-| id_cancion | INT | FK | Canción reproducida |
-| fecha | DATETIME | — | Fecha y hora en que se realizó la reproducción |
+| id_cancion | INT | FK | Canción que fue reproducida |
+| fecha_reproduccion | DATETIME | — | Fecha y hora en que se realizó la reproducción |
